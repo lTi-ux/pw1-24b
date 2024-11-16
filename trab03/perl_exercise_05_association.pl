@@ -20,4 +20,6 @@ has 'especie' => (is => 'rw', isa => 'Str');
 
 package main;
 my $animal = Animal->new(nombre => 'Luna', especie => 'Perro');
-my $persona = Persona->new
+my $persona = Persona->new(nombre => 'Laura', mascota => $animal);
+
+print $persona->nombre, " tiene una mascota llamada ", $persona->mascota->nombre, " que es un ", $persona->mascota->especie, "\n";
